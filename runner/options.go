@@ -1,11 +1,6 @@
 package runner
 
 import (
-	"math"
-	"os"
-	"regexp"
-	"strings"
-	"github.com/projectdiscovery/httpx/common/slice"
 	"github.com/projectdiscovery/fileutil"
 	"github.com/projectdiscovery/goconfig"
 	"github.com/projectdiscovery/goflags"
@@ -16,7 +11,12 @@ import (
 	"github.com/projectdiscovery/httpx/common/customlist"
 	customport "github.com/projectdiscovery/httpx/common/customports"
 	fileutilz "github.com/projectdiscovery/httpx/common/fileutil"
+	"github.com/projectdiscovery/httpx/common/slice"
 	"github.com/projectdiscovery/httpx/common/stringz"
+	"math"
+	"os"
+	"regexp"
+	"strings"
 )
 
 const (
@@ -229,6 +229,7 @@ type Options struct {
 	Hashes                    string
 	Jarm                      bool
 	Asn                       bool
+	Domainsfinder             bool
 }
 
 // ParseOptions parses the command line options for application
@@ -265,6 +266,8 @@ func ParseOptions() *Options {
 		flagSet.BoolVar(&options.OutputCDN, "cdn", false, "display cdn in use"),
 		flagSet.BoolVar(&options.Probe, "probe", false, "display probe status"),
 	)
+	createGroup(flagSet, "Domainsfinder", "Domainsfinder",
+		flagSet.BoolVar(&options.Domainsfinder, "find domains", false, "Domainsfinder is a subdomain discovery tool"))
 
 	createGroup(flagSet, "matchers", "Matchers",
 		flagSet.StringVarP(&options.OutputMatchStatusCode, "match-code", "mc", "", "match response with specified status code (-mc 200,302)"),
