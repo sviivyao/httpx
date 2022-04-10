@@ -7,9 +7,9 @@
 
 <p align="center">
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-_red.svg"></a>
-<a href="https://goreportcard.com/badge/github.com/projectdiscovery/httpx"><img src="https://goreportcard.com/badge/github.com/projectdiscovery/httpx"></a>
-<a href="https://github.com/projectdiscovery/httpx/releases"><img src="https://img.shields.io/github/release/projectdiscovery/httpx"></a>
-<a href="https://hub.docker.com/r/projectdiscovery/httpx"><img src="https://img.shields.io/docker/pulls/projectdiscovery/httpx.svg"></a>
+<a href="https://goreportcard.com/badge/github.com/sviivyao/httpx"><img src="https://goreportcard.com/badge/github.com/sviivyao/httpx"></a>
+<a href="https://github.com/sviivyao/httpx/releases"><img src="https://img.shields.io/github/release/sviivyao/httpx"></a>
+<a href="https://hub.docker.com/r/sviivyao/httpx"><img src="https://img.shields.io/docker/pulls/sviivyao/httpx.svg"></a>
 <a href="https://twitter.com/pdiscoveryio"><img src="https://img.shields.io/twitter/follow/pdiscoveryio.svg?logo=twitter"></a>
 <a href="https://discord.gg/projectdiscovery"><img src="https://img.shields.io/discord/695645237418131507.svg?logo=discord"></a>
 </p>
@@ -65,7 +65,7 @@ httpx is a fast and multi-purpose HTTP toolkit allow to run multiple probers usi
 httpx requires **go1.17** to install successfully. Run the following command to get the repo - 
 
 ```sh
-go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+go install -v github.com/sviivyao/httpx/cmd/httpx@latest
 ```
 
 # Usage
@@ -422,7 +422,7 @@ http://www.hackerone.com/v1/api [301]
 ### Docker Run
 
 ```console
-cat sub_domains.txt | docker run -i projectdiscovery/httpx
+cat sub_domains.txt | docker run -i /sviivyao/httpx
 
     __    __  __       _  __
    / /_  / /_/ /_____ | |/ /
@@ -460,6 +460,6 @@ https://support.hackerone.com
 
 # Acknowledgement
 
-httpx is made with 🖤 by the [projectdiscovery](https://projectdiscovery.io) team. Community contributions have made the project what it is. See the **[Thanks.md](https://github.com/projectdiscovery/httpx/blob/master/THANKS.md)** file for more details. Do also check out these similar awesome projects that may fit in your workflow:
+httpx is made with 🖤 by the [projectdiscovery](https://projectdiscovery.io) team. Community contributions have made the project what it is. See the **[Thanks.md](https://github.com/sviivyao/httpx/blob/master/THANKS.md)** file for more details. Do also check out these similar awesome projects that may fit in your workflow:
 
 Probing feature is inspired by [@tomnomnom/httprobe](https://github.com/tomnomnom/httprobe) work :heart:

@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/projectdiscovery/httpx/common/slice"
 	"github.com/projectdiscovery/stringsutil"
+	"github.com/sviivyao/httpx/common/slice"
 )
 
 // CSPHeaders is an incomplete list of most common CSP headers

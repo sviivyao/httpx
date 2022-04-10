@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/RumbleDiscovery/jarm-go"
-	"github.com/projectdiscovery/httpx/common/regexhelper"
+	"github.com/sviivyao/httpx/common/regexhelper"
 	"golang.org/x/net/proxy"
 )
 
@@ -20,8 +20,8 @@ var DefualtBackoff = func(r, m int) time.Duration {
 }
 
 type target struct {
-	Host string
-	Port int
+	Host    string
+	Port    int
 	Retries int
 	Backoff func(r, m int) time.Duration
 }

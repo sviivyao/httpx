@@ -8,23 +8,23 @@ import (
 	"strings"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/projectdiscovery/httpx/internal/testutils"
+	"github.com/sviivyao/httpx/internal/testutils"
 )
 
 var httpTestcases = map[string]testutils.TestCase{
-	"Standard HTTP GET Request":                                                           &standardHttpGet{},
-	"Standard HTTPS GET Request":                                                          &standardHttpGet{tls: true},
-	"Raw HTTP GET Request":                                                                &standardHttpGet{unsafe: true},
-	"Raw request with non standard rfc path via stdin":                                    &standardHttpGet{unsafe: true, stdinPath: "/%invalid"},
-	"Raw request with non standard rfc path via cli flag":                                 &standardHttpGet{unsafe: true, path: "/%invalid"},
-	"Regression test for: https://github.com/projectdiscovery/httpx/issues/363":           &issue363{}, // infinite redirect
-	"Regression test for: https://github.com/projectdiscovery/httpx/issues/276":           &issue276{}, // full path with port in output
-	"Regression test for: https://github.com/projectdiscovery/httpx/issues/277":           &issue277{}, // scheme://host:port via stdin
-	"Regression test for: https://github.com/projectdiscovery/httpx/issues/303":           &issue303{}, // misconfigured gzip header with uncompressed body
-	"Regression test for: https://github.com/projectdiscovery/httpx/issues/400":           &issue400{}, // post operation with body
-	"Regression test for: https://github.com/projectdiscovery/httpx/issues/414":           &issue414{}, // stream mode with path
-	"Regression test for: https://github.com/projectdiscovery/httpx/issues/433":           &issue433{}, // new line scanning with title flag
-	"Request URI to existing file - https://github.com/projectdiscovery/httpx/issues/480": &issue480{}, // request uri pointing to existing file
+	"Standard HTTP GET Request":                                                   &standardHttpGet{},
+	"Standard HTTPS GET Request":                                                  &standardHttpGet{tls: true},
+	"Raw HTTP GET Request":                                                        &standardHttpGet{unsafe: true},
+	"Raw request with non standard rfc path via stdin":                            &standardHttpGet{unsafe: true, stdinPath: "/%invalid"},
+	"Raw request with non standard rfc path via cli flag":                         &standardHttpGet{unsafe: true, path: "/%invalid"},
+	"Regression test for: https://github.com/sviivyao/httpx/issues/363":           &issue363{}, // infinite redirect
+	"Regression test for: https://github.com/sviivyao/httpx/issues/276":           &issue276{}, // full path with port in output
+	"Regression test for: https://github.com/sviivyao/httpx/issues/277":           &issue277{}, // scheme://host:port via stdin
+	"Regression test for: https://github.com/sviivyao/httpx/issues/303":           &issue303{}, // misconfigured gzip header with uncompressed body
+	"Regression test for: https://github.com/sviivyao/httpx/issues/400":           &issue400{}, // post operation with body
+	"Regression test for: https://github.com/sviivyao/httpx/issues/414":           &issue414{}, // stream mode with path
+	"Regression test for: https://github.com/sviivyao/httpx/issues/433":           &issue433{}, // new line scanning with title flag
+	"Request URI to existing file - https://github.com/sviivyao/httpx/issues/480": &issue480{}, // request uri pointing to existing file
 }
 
 type standardHttpGet struct {

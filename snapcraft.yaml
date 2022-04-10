@@ -29,6 +29,6 @@ plugs:
 
 parts:
   httpx:
-    source: https://github.com/projectdiscovery/httpx.git
+    source: https://github.com/sviivyao/httpx.git
     plugin: go
     go-channel: latest/stable

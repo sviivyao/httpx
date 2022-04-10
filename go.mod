@@ -1,6 +1,6 @@
-module github.com/projectdiscovery/httpx
+module github.com/sviivyao/httpx
 
-go 1.17
+go 1.16
 
 require (
 	github.com/akrylysov/pogreb v0.10.1 // indirect

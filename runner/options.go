@@ -1,22 +1,23 @@
 package runner
 
 import (
+	"math"
+	"os"
+	"regexp"
+	"strings"
+
 	"github.com/projectdiscovery/fileutil"
 	"github.com/projectdiscovery/goconfig"
 	"github.com/projectdiscovery/goflags"
 	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/gologger/formatter"
 	"github.com/projectdiscovery/gologger/levels"
-	"github.com/projectdiscovery/httpx/common/customheader"
-	"github.com/projectdiscovery/httpx/common/customlist"
-	customport "github.com/projectdiscovery/httpx/common/customports"
-	fileutilz "github.com/projectdiscovery/httpx/common/fileutil"
-	"github.com/projectdiscovery/httpx/common/slice"
-	"github.com/projectdiscovery/httpx/common/stringz"
-	"math"
-	"os"
-	"regexp"
-	"strings"
+	"github.com/sviivyao/httpx/common/customheader"
+	"github.com/sviivyao/httpx/common/customlist"
+	customport "github.com/sviivyao/httpx/common/customports"
+	fileutilz "github.com/sviivyao/httpx/common/fileutil"
+	"github.com/sviivyao/httpx/common/slice"
+	"github.com/sviivyao/httpx/common/stringz"
 )
 
 const (

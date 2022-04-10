@@ -29,10 +29,10 @@ import (
 	"github.com/projectdiscovery/clistats"
 	"github.com/projectdiscovery/cryptoutil"
 	"github.com/projectdiscovery/goconfig"
-	"github.com/projectdiscovery/httpx/common/hashes"
 	"github.com/projectdiscovery/retryablehttp-go"
 	"github.com/projectdiscovery/stringsutil"
 	"github.com/projectdiscovery/urlutil"
+	"github.com/sviivyao/httpx/common/hashes"
 
 	// automatic fd max increase if running as root
 	_ "github.com/projectdiscovery/fdmax/autofdmax"
@@ -40,17 +40,17 @@ import (
 	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/hmap/store/hybrid"
 	pdhttputil "github.com/projectdiscovery/httputil"
-	customport "github.com/projectdiscovery/httpx/common/customports"
-	fileutilz "github.com/projectdiscovery/httpx/common/fileutil"
-	"github.com/projectdiscovery/httpx/common/httputilz"
-	"github.com/projectdiscovery/httpx/common/httpx"
-	"github.com/projectdiscovery/httpx/common/slice"
-	"github.com/projectdiscovery/httpx/common/stringz"
 	"github.com/projectdiscovery/iputil"
 	"github.com/projectdiscovery/mapcidr"
 	"github.com/projectdiscovery/rawhttp"
 	wappalyzer "github.com/projectdiscovery/wappalyzergo"
 	"github.com/remeh/sizedwaitgroup"
+	customport "github.com/sviivyao/httpx/common/customports"
+	fileutilz "github.com/sviivyao/httpx/common/fileutil"
+	"github.com/sviivyao/httpx/common/httputilz"
+	"github.com/sviivyao/httpx/common/httpx"
+	"github.com/sviivyao/httpx/common/slice"
+	"github.com/sviivyao/httpx/common/stringz"
 	"go.uber.org/ratelimit"
 )
 
@@ -1293,7 +1293,7 @@ retry:
 	}
 	jarmhash := ""
 	if r.options.Jarm {
-		jarmhash = hashes.Jarm(fullURL,r.options.Timeout)
+		jarmhash = hashes.Jarm(fullURL, r.options.Timeout)
 		builder.WriteString(" [")
 		if !scanopts.OutputWithNoColor {
 			builder.WriteString(aurora.Magenta(jarmhash).String())

@@ -11,7 +11,7 @@ import (
 	"github.com/logrusorgru/aurora"
 	"github.com/pkg/errors"
 
-	"github.com/projectdiscovery/httpx/internal/testutils"
+	"github.com/sviivyao/httpx/internal/testutils"
 )
 
 var (
@@ -22,7 +22,7 @@ var (
 
 	mainHttpxBinary = flag.String("main", "", "Main Branch Httpx Binary")
 	devHttpxBinary  = flag.String("dev", "", "Dev Branch Httpx Binary")
-	testcases      = flag.String("testcases", "", "Test cases file for Httpx functional tests")
+	testcases       = flag.String("testcases", "", "Test cases file for Httpx functional tests")
 )
 
 func main() {
